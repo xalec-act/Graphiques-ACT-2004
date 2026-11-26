@@ -57,11 +57,38 @@ validate_parameters <- function(contract,law,delta,mu,omega,x,m,n,h,b,pi) {
   e
 }
 
-valid_premium_interval <- function(contract,b,delta,m,n,h) {
-  a_h <- annuity_cont(h,delta)
-  lower <- if(m==0 && n==100) b*exp(-delta*n)/a_h else 0
-  upper <- if(contract=="Assurance") {
-    if(m==0) b else b*exp(-delta*m)/a_h
-  } else Inf
-  list(lower=lower,upper=upper)
+valid_premium_interval <- function(
+        contract,
+        b,
+        delta,
+        m,
+        n,
+        h
+) {
+    a_h <- annuity_cont(h, delta)
+
+    lower <- if (m == 0 && n == 100) {
+        b * exp(-delta * n) / a_h
+    } else {
+        0
+    }
+
+    if (contract == "Assurance") {
+        upper <- if (m == 0) {
+            b
+        } else {
+            b * exp(-delta * m) / a_h
+        }
+    } else {
+        upper <-
+            b *
+            exp(-delta * m) *
+            annuity_cont(n, delta) /
+            a_h
+    }
+
+    list(
+        lower = lower,
+        upper = upper
+    )
 }

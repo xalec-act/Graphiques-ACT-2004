@@ -23,19 +23,19 @@ dir.create("docs")
 shinylive::export(
     appdir = "applications/application_L",
     destdir = "docs",
-    subdir = "application_L"
+    subdir = "fonctions-perte"
 )
 
 shinylive::export(
     appdir = "applications/application_Z",
     destdir = "docs",
-    subdir = "application_Z"
+    subdir = "application-Z"
 )
 
 shinylive::export(
     appdir = "applications/application_Y",
     destdir = "docs",
-    subdir = "application_Y"
+    subdir = "application-Y"
 )
 
 page_accueil <- '
