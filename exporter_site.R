@@ -90,17 +90,17 @@ page_accueil <- '
   <div class="application">
     <h2>Fonctions de perte</h2>
     <p>Fonctions L(T) et F<sub>L</sub>(l).</p>
-    <a href="./fonctions-perte/">Ouvrir</a>
+    <a href="./application_L/">Ouvrir</a>
   </div>
 
   <div class="application">
-    <h2>Application Z</h2>
-    <a href="./application-Z/">Ouvrir</a>
+    <h2>Fonctions pour Z</h2>
+    <a href="./application_Z/">Ouvrir</a>
   </div>
 
   <div class="application">
-    <h2>Application Y</h2>
-    <a href="./application-Y/">Ouvrir</a>
+    <h2>Fonctions pour Y</h2>
+    <a href="./application_Y/">Ouvrir</a>
   </div>
 </body>
 </html>
